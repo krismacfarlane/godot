@@ -4,25 +4,30 @@
 # Part 1
 ################################################################################
 
+require 'pry'
+# binding.pry
+
 # Step 1
 # Require the file taylors.rb
+require_relative './taylors.rb'
 
 # Require the file boneyard/exes.rb
+require_relative './boneyard/exes.rb'
 
 # Step 2
 # Methods
 
 def sing(lyric)
-  # missing code
+  "♬" + lyric + "♬"
 end
 
 def mmm_mmm(lyric)
-  # missing code
+  lyric + ", mmm-mmm"
 end
 
-
 def back_up(lyric, number_of_words)
-  # missing code
+  back_up_singers = lyric.split(" ").last(number_of_words).join(" ")
+  "#{lyric} (#{back_up_singers})"
 end
 
 # Step 3
