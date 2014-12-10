@@ -23,12 +23,36 @@ class McDonalds
     (open <= time.gsub(":","").to_i) && (time.gsub(":","").to_i <= close)
   end
 
+  GREETING = "Welcome to McDonald's, may I take your order?"
+
   def order(num, menu_item)
     @served += num
-    $stdout.puts("Here is your order of #{num} #{menu_item}. Thank you!")
+    $stdout.puts("#{GREETING} Here is your order of #{num} #{menu_item}. Thank you!")
   end
 
   attr_reader :served
+
+  @@served = 0
+
+  def self.served
+    @@served
+  end
+
+  attr_reader :mc_rib
+
+  @@mc_rib = false
+
+  def self.mc_rib
+    @@mc_rib
+  end
+
+  def has_mc_rib?
+    @@mc_rib
+  end
+
+  def McDonalds.toggle_mc_rib
+    McDonalds.toggle_mc_rib
+  end
 
 end
 

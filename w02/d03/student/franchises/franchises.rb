@@ -34,3 +34,13 @@ union_square_mcd.order(1, "filet o' fish")
 
 $stdout.puts(chelsea_mcd.served)      # >> 5
 $stdout.puts(union_square_mcd.served) # >> 3
+
+$stdout.puts(McDonalds.served)
+
+$stdout.puts(McDonalds.mc_rib)        #=> false
+$stdout.puts(chelsea_mcd.has_mc_rib?)
+
+chelsea_mcd.order(2, "shakes")
+
+$stdout.puts(McDonalds.mc_rib)        #=> false
+$stdout.puts(chelsea_mcd.has_mc_rib?)
