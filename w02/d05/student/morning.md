@@ -2,7 +2,7 @@
 
 ![:image](https://i0.wp.com/www.filmscouts.com/zgifclip/cannes97/hamlet.gif)
 
-> Is it Nobler in the mind to suffer rewriting each array as a hash or to take Arms and convert them programmatically? 
+> Is it Nobler in the mind to suffer rewriting each array as a hash or to take Arms and convert them programmatically?
 
 # Part 1
 
@@ -37,13 +37,11 @@ Programatically select all the Hamlets from the 1960's and assign them to an arr
 
 ## Fifth
 
-Programatically select all the Hamlets from the 1960's and assign them to an array called `swingin_hamlets`
-
 Programatically select all the Hamlets from the 2000's and assign them to an array called `future_hamlets`
 
 # Part 2
 
-## One 
+## One
 Convert the following `quotes` array into an array of hashes.
 Each hash should have the keys `:quote`, `:play`, `:act` and `:scene`
 
