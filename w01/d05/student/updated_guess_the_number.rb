@@ -2,6 +2,7 @@
 # Write comments above *each line* explaining what it does
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # pulling in a gem
 require 'colorize'
 
@@ -41,46 +42,41 @@ while playing_game
 # starting a conditional, if the secret number equals the user's guess
 =======
 # calling a gem which is also a file of preset font types/methods
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 require 'colorize'
 
-#  instantiates the variable playing_game = true
 playing_game = true
-# creating a hash named players
 players = {}
 
-# starts the while loop with playing being = true
 while playing_game
 
-# sets secret number equal to a sample of an array filled with 1-10
   secret_number = (1..10).to_a.sample
-# sets guessed = false
   guessed = false
 
-# prints to the user "Name?""
   $stdout.print('Name? ')
-  # sets player = the users input (i.e. their name)
   player = $stdin.gets.chomp
-# creates an array within a hash
   players[player] = []
-#outputs to the user the statement below
+
   $stdout.puts('I\'m thinking of a number between 1 and 10. Can you guess it?')
 
-#new while loop runs when guessed = false
   while !guessed
-# print line
+
     $stdout.print('> ')
-#sets guess = user input which is changed to an int
     guess = $stdin.gets.to_i
-# puts the players guess into the array with the hash
     players[player].push(guess)
 
+<<<<<<< HEAD
 # An if loop to check to see if the number is correct
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
     if secret_number == guess
 # then the guessed changes from false to true and throws you out of the while loop
       guessed = true
 # if the user's guess is not the secret number then the loop continues, but first!
     else
+<<<<<<< HEAD
 <<<<<<< HEAD
 # print the user's input with a string in red
       $stdout.puts("#{guess}? Try again!".red)
@@ -90,17 +86,24 @@ while playing_game
   end
 =======
 # otherwise outputs a fail statement which calls your guess
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
       $stdout.puts("#{guess}? Try again!".red)
-    end #end if
+    end
 
+<<<<<<< HEAD
   end # end inner while
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+  end
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 
 # when the user's input equals the secret number, printing the user's name with string, including the guesses found in the array
   $stdout.puts("Great job, #{player}! You guessed in #{players[player].size} guesses.".green)
 
 # prints string that would restart the while loop
   $stdout.puts('New Game?')
+<<<<<<< HEAD
 <<<<<<< HEAD
 # if they answer yes to the question then restart while loop
   playing_game = $stdin.gets.chomp.downcase.start_with?('y')
@@ -111,6 +114,10 @@ end
   playing_game = $stdin.gets.chomp.downcase.start_with?('y')
 end # end outer while
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+  playing_game = $stdin.gets.chomp.downcase.start_with?('y')
+end
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 
 # print the exit message
 $stdout.puts('Goodbye!')

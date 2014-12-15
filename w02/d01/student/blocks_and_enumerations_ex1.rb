@@ -1,23 +1,35 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Strings and Arrays
 #
 # 1. Write the Ruby to split the string `contenders` into an array of 4 items.
 
 contenders = "Alabama, Florida State, Oregon, Ohio State"
 $stdout.puts(contenders.split(", "))
+=======
+# Strings and Arrays
+# 
+# 1. Write the Ruby to split the string `contenders` into an array of 4 items.
+
+contenders = "Alabama, Florida State, Oregon, Ohio State"
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 
 # 2. Write the Ruby to turn the array `contenders` into the string:
 #    "Alabama, Florida State, Oregon, Ohio State are in the playoffs."
 
 contenders = ["Alabama", "Florida State", "Oregon", "Ohio State"]
+<<<<<<< HEAD
 $stdout.puts("#{contenders.join(", ")} are in the playoffs.")
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 
 # Data Structures
 #
 # Write the Ruby to discover what type of data structure the variable
 # `contenders` is.
 
+<<<<<<< HEAD
 $stdout.puts(contenders.class)
 
 # Arrays
@@ -45,16 +57,18 @@ $stdout.puts(contenders.class)
 # # Arrays
 # #
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+# Arrays
+#
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 # 1. Use Ruby to create an array named `contenders` in TWO DIFFERENT WAYS with
 #    the following items:
 #      a. "Alabama"
 #      b. "Florida State"
 #      c. "Texas Christian University (TCU)"
 #      d. "Baylor"
-contenders = ["Alabama", "Florida State", "Texas Christian University (TCU)", "Baylor"]
-contenders2 = []
-contenders2.push("Alabama").push("Florida State").push("Texas Christian University (TCU").push("Baylor")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 contenders = ["Alabama", "Florida State", "Texas Christian University (TCU)", "Baylor"]
 
@@ -64,30 +78,28 @@ contenders = Array.new(["Alabama", "Florida State", "Texas Christian University 
 puts(contenders)
 puts(contenders2)
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 # 2. Access the 3rd item in the array `contenders`.
-puts(contenders[2])
-puts(contenders2[2])
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 $stdout.puts(contenders[2])
 
 =======
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
 # 3. Set the 4th item as "Texas Christian University (TCU),"
+=======
+# 3. Set the 4th item as "Texas Christian University (TCU)," 
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 #    and the 3rd item as "Oregon."
-contenders[3] = "Texas Christian University (TCU)"
-contenders[2] = "Oregon"
-
-contenders2[3] = "Texas Christian University (TCU)"
-contenders2[2] = "Oregon"
 
 contenders.insert(2, "Oregon")
 $stdout.puts(contenders)
 
 # 4. Print the number of items in the array.
-puts(contenders.count)
-puts(contenders2.length)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 $stdout.puts(contenders.count)
 
@@ -98,6 +110,9 @@ contenders.pop
 contenders.push("Ohio State")
 puts(contenders)
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+# 5. Remove the last item in the array, then add another item to the end of the 
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 #   array that is the string "Ohio State."
 
 contenders.pop
@@ -106,9 +121,6 @@ $stdout.puts(contenders)
 
 # 6. Add the number 1 to the beginning of the array, then remove the first item
 #    in the array and print it.
-puts(contenders2.unshift(1))
-puts(contenders2.shift)
-
 
 contenders.
 
@@ -123,10 +135,14 @@ contenders.
 #      f. "Ohio State" and "Big Ten"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 # 2. Access the value with the key "Baylor."
 
 # 3. Set the value with the key "Ohio State" to "Big 10."
 
+<<<<<<< HEAD
 # 4. List the unique teams (keys) in the hash. List the unique values
 #    (conferences) in the hash.
 =======
@@ -147,26 +163,20 @@ contenders.
 # puts(contenders.keys)
 # puts(contenders.values)
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+# 4. List the unique teams (keys) in the hash. List the unique values 
+#    (conferences) in the hash.
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
 
 # Loops
 #
 # 1. Use a Ruby while loop to print out every item in an array in all capitals.
-# num = 0
-# while(num < contenders.length)
-#   puts contenders[num].upcase
-#   num = num + 1
-# end
 
 # 2. Use a basic Ruby loop (loop do; ... end) and a break statement to do the
 #    above.
-number = 0
-loop do
-  puts contenders[number].upcase
-  number += 1
-  break if number >= contenders.count
-end
 
 # Methods
+<<<<<<< HEAD
 <<<<<<< HEAD
 #
 =======
@@ -223,3 +233,10 @@ end
 
 puts(hip_hip_hooray(7))
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+#
+# Define a new method that takes an array of strings as input. It prints to the 
+# standard output every item in the array followed by the words: " might win!",
+# unless the string's contents is "Ohio State", in which case it adds the words
+# " will win!". Finally, it returns the number of items in the array.
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44

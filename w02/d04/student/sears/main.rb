@@ -1,8 +1,7 @@
 require 'pry'
 require_relative 'product'
-require_relative 'bike'
-require_relative 'shirt'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 my_bike = Bike.new(200, "Bike Brand", 2, 15)
 
@@ -22,3 +21,5 @@ puts(tank_top.size)
 puts(tank_top.color)
 puts(tank_top.text)
 >>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44

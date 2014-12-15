@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Shirt < Product
 
 <<<<<<< HEAD
@@ -20,3 +21,5 @@ class Shirt < Product
   end
 
 end
+=======
+>>>>>>> 5c0805cd5d2e70cf09eee0aff4c3d19c3a7e0b44
