@@ -23,4 +23,12 @@ class Playlist
     end
   end
 
+  def play
+    self.songs.each do |song|
+      sleep(1)
+      song.play
+      sleep(1)
+    end
+  end
+
 end

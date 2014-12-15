@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'pry'
 # binding.pry
 
@@ -44,6 +45,50 @@ smoothie_ingredients = [
 # $stdout.puts(blended_smoothie)
 
 # Part 2 A hash
+=======
+# smoothie_ingredients = [
+#   'flax seeds',
+#   'chia seeds',
+#   'coconut flakes',
+#   'spirulina',
+#   'pumpkin seeds',
+#   'oatmeal',
+#   'coco powder',
+#   'peanut butter',
+#   'almonds',
+#   'walnuts',
+#   'spinach',
+#   'greek yogurt',
+#   'nutrional yeast',
+#   'brussel sprouts',
+#   'asparagus',
+#   'kale',
+#   'brocoli rabe',
+#   'blue berries',
+#   'chopped banana',
+#   'straw berries',
+#   'mango',
+#   'hemp milk'
+# ]
+
+# def blend (ingredients)
+#   mixed_ingredients = []
+
+#   ingredients.each do |ingredients|
+#     mixed_up = ingredients.delete(' ').split('').shuffle.join
+#     mixed_ingredients.push(mixed_up)
+#   end
+
+#   mixed_ingredients.join
+# end
+
+# blended_smoothie = blend(smoothie_ingredients)
+# $stdout.puts(blended_smoothie)
+
+# /////////////////////////////////////////////
+# /////////////////////////////////////////////
+
+>>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
 smoothie_ingredients = {
   'flax seeds'      => '1 tbsp',
   'chia seeds'      => '1 tbsp',
@@ -69,6 +114,7 @@ smoothie_ingredients = {
   'hemp milk'       => '1 cup'
 }
 
+<<<<<<< HEAD
 
 just_ingredients = []
 
@@ -86,3 +132,12 @@ $stdout.puts(blended_smoothie)
 
 
 
+=======
+def making_hash_smoothie(smoothie_ingredients)
+  ingredients = smoothie_ingredients.keys
+  blend = ingredients.join.split('').shuffle.join.gsub(' ','')
+end
+
+blended_smoothie = making_hash_smoothie(smoothie_ingredients)
+$stdout.puts(blended_smoothie)
+>>>>>>> 6eba04b029e8da1a83cf640b9242378c1de84e8d
