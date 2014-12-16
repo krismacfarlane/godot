@@ -48,31 +48,36 @@ module AppName                    # 1.  What is `AppName` and why do we use it?
 end
 ```
 
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
+1. AppName is the name of the module being created. Modules are used to prevent
+repeating and they hold classes and are constants. They do not have methods of
+their own.
+2. Server is the name of a class that is being defined.
+3. Sinatra is the name of the module that Server is inheriting from.
+4. Base is the specific class within the Sinatra module that Server is getting
+properities from
+5. Enable is a method in Sinatra
+6. Get is a method
+7. # 7.  What are the three inputs of `get`? ****
+8. $stderr. prints to the client's browser
+9. Logger was invoked because we enabled logging. It is keeping records on the
+developers (our) side of things, so you can go back and see the errors and
+successes.
+10. Error is a method called on logger.
+11. Logger prints to the server side.
+12. Logger prints to server side and $stderr goes to the client's.
+13. Logger.info gives more information/explanation.
+14. Request is what the client's server sent over
+15. Request is an object.
+16. url is a method called on the object 'request'
+17. Status is used to set the response to the request
+18. Status is called on 'get' which is the client's input (/)
+19. Status codes with 200 are successes!
+20. Params are the client's inputs following the url
+21. Params returns a string
+22. It represents the value of the client's inputs.
+23. Body is a method
+24. Body is what gets printed to the screen
+25. That response does not need to be printed to the screen
 
 ## Part 2
 
@@ -89,16 +94,16 @@ run AppName::Server         # 7.  What is `run`?
                             # 10. Where did `run` come from?
 ```
 
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
+1.  This requires the Sinatra library gem.
+2.  This is the name of the ruby library.
+3.  It's on the ruby server.
+4.  Because you need to tell the rackup to look for the module to run
+5.  The location of the module
+6.  It is in the same folder as the rackup
+7.  run is a method
+8.  It is the name of the module and class that you will be pulling from
+9.  It is in the .server file that was required
+10. Run is found in the Sinatra gem.
 
 ## Bonus
 
