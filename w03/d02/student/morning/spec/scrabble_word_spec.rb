@@ -3,15 +3,20 @@
 
 # Morning!
 
-word = ScrabbleWord.new('a')
-assert_that(
-  '`Srabble#score` should return the score value of that letter based on the above scoring "hash" table.',
-  word = ScrabbleWord.new('b'),
-  3)
+require_relative './simple_assert.rb'
+require_relative '../scrabble_word.rb'
+include SimpleAssert
+
+# word = ScrabbleWord.new('b')
+
+# assert_that(
+#   '`Scrabble#score` should return the score value of that letter based on the above scoring "hash" table.',
+# word.score,
+#   3)
 
 # Uncomment the next assertion once the first passes!
 
-# word = ScrabbleWord.new('c')
+# word = ScrabbleWord.new('C')
 # assert_that(
 #   'The score should not be affected by capitalization.',
 #   word.score,
@@ -24,11 +29,11 @@ assert_that(
 #   9)
 
 
-# word = ScrabbleWord.new('SnoWMaN')
-# assert_that(
-#   '`Scrabble#score` is not affected by capitalization',
-#   word.score,
-#   12)
+word = ScrabbleWord.new('SnoWMaN')
+assert_that(
+  '`Scrabble#score` is not affected by capitalization',
+  word.score,
+  12)
 
 
 # word = ScrabbleWord.new('snowflake')
