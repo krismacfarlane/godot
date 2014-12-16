@@ -3,6 +3,7 @@
 
 # Morning!
 
+<<<<<<< HEAD
 require_relative './simple_assert.rb'
 require_relative '../scrabble_word.rb'
 include SimpleAssert
@@ -13,6 +14,14 @@ include SimpleAssert
 #   '`Scrabble#score` should return the score value of that letter based on the above scoring "hash" table.',
 # word.score,
 #   3)
+=======
+word = ScrabbleWord.new('b')
+score = word.score
+assert_that(
+  '`Srabble#score` should return the score value of that letter based on the above scoring "hash" table.',
+  score,
+  3)
+>>>>>>> cfc7780e5b1efc39bd48e97d278eb3222e250d2c
 
 # Uncomment the next assertion once the first passes!
 
