@@ -1,0 +1,21 @@
+html {
+  background-color: navy
+}
+
+header {
+  font-size: 200%,
+  color: lightcoral;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#basic-info {
+  color: seagreen;
+}
+
+.important {
+  font-size: 120%;
+  color: hotpink;
+}
