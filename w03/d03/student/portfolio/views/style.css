@@ -1,0 +1,21 @@
+html {
+  background-color: navy
+}
+
+header {
+  font-size: 150%;
+  color: limegreen;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#basic-info {
+  color: deeppink;
+}
+
+.important {
+  font-size: 110%;
+  color: deeppink;
+}
