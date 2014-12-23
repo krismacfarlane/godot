@@ -1,5 +1,6 @@
 require_relative 'simple_assert'
 include SimpleAssert
+require_relative '../dice.rb'
 
 # A traditional die is a rounded cube, with each of its six faces showing a
 # different number of dots (pips) from 1 to 6.
@@ -24,6 +25,13 @@ assert_that(
   Parlour::Dice
 )
 
+set_of_dice = Parlour::Dice.new([6,6])
+assert_that(
+  "check that initalize creates an array_dice instance variable",
+  set_of_dice.array_dice,
+  [6,6]
+)
+
 three_six_sided_dice = [6, 6, 6]
 assert_that(
   'Parlour::Dice#roll returns an array of rolled dice',
@@ -31,10 +39,18 @@ assert_that(
   Array
 )
 
+dice = Parlour::Dice.new([6, 6, 6])
+rolled_dice = dice.roll
+assert_that(
+  "number of rolled dice is the same as number of array_dice",
+  rolled_dice.length,
+  3
+)
+
 four_six_sided_dice = [6, 6, 6, 6]
 roll = Parlour::Dice.new(four_six_sided_dice).roll
 assert_that(
-  'Parlour::Dice#roll returns an array of random Fixnums',
+  'Parlour::Dice#roll returns an array of random Fixnum',
   roll.all? { |n| n.is_a? Fixnum },
   true
 )
@@ -55,9 +71,9 @@ assert_that(
   Fixnum
 )
 
-# Die don't have to be just 6 sides! You can also have irregular sided die like
-# a dodecahedron, from the Greek δωδεκάεδρον, from δώδεκα dōdeka "twelve" +
-# ἕδρα hédra "base", "seat" or "face")
+# # Die don't have to be just 6 sides! You can also have irregular sided die like
+# # a dodecahedron, from the Greek δωδεκάεδρον, from δώδεκα dōdeka "twelve" +
+# # ἕδρα hédra "base", "seat" or "face")
 
 three_twelve_sided_dice = [12, 12, 12]
 assert_that(
