@@ -3,8 +3,13 @@ include StarPower
 
 module StarStalker
   class Server < Sinatra::Base
+
     get("/") do
       render(:erb, :index, { :layout => :default_layout })
+    end
+
+    get("/about") do
+      render(:erb, :about, { :layout => :default_layout})
     end
 
     get("/stars") do
@@ -18,11 +23,11 @@ module StarStalker
       render(:erb, :stars, { :layout => :default_layout })
     end
 
-
     get("/stars/:id") do
       id = params[:id].to_i
       @star = STARS[id]
       render(:erb, :profile, { :layout => :default_layout })
     end
+
   end
 end
