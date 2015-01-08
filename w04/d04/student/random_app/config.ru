@@ -1,3 +1,4 @@
+require 'json'
 require 'redis'
 require 'sinatra/base'
 require 'sinatra/reloader'
