@@ -16,3 +16,31 @@ html {
 /* ======================================= */
 /*    Students: Write Your Styles Below!   */
 /* ======================================= */
+
+.main {
+  position: absolute;
+  top:75px;
+  bottom:200px;
+  left:200px;
+  right:200px;
+}
+
+.text1 {
+  position: absolute;
+  top:150px;
+  bottom:200px;
+  left:500px;
+  right:200px;
+  color: blue;
+  font-size: 150px;
+}
+
+.text2 {
+  position: absolute;
+  top:300px;
+  bottom:200px;
+  left:500px;
+  right:200px;
+  color: red;
+  font-size: 150px;
+}

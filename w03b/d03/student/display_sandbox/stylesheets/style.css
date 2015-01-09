@@ -8,17 +8,24 @@ h1 {
 
 .red {
   background-color: red;
+  display: inline-block;
 }
 
 .blue {
   background-color: blue;
+  display: inline-block;
 }
 
 .green {
   background-color: green;
+  display: inline-block;
 }
 
 div {
   height: 200px;
   width: 200px;
+}
+
+ul {
+  display: inline-block;
 }

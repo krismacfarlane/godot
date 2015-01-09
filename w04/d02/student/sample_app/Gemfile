@@ -4,5 +4,5 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'sinatra-contrib'
 
-# TODO add Redis
-# TODO add pry to the development group
+gem 'redit'
+gem 'pry'

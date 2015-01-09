@@ -1,0 +1,11 @@
+<h1>All The Sketches</h1>
+
+<ul>
+  <% @sketches.each do |sketch| %>
+    <li> <label>Sketch from <%= sketch["sketch_date"] %>
+    <img src="<%= sketch["sketch_url"] %>"> </li>
+  <% end %>
+
+</ul>
+
+

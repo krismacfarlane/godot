@@ -37,3 +37,35 @@ img {
 /*==================================*/
 /* Write Your Styles below!!! */
 /*==================================*/
+
+.heart {
+  position: absolute;
+  top: 315px;
+  right:200px;
+  bottom:200px;
+  left:680px;
+}
+
+.butterflies {
+  position: absolute;
+  top: 430px;
+  right:200px;
+  bottom:200px;
+  left:656px;
+}
+
+.wishbone {
+  position: absolute;
+  top: 290px;
+  right:200px;
+  bottom:200px;
+  left:610px;
+}
+
+.breadbasket {
+  position: absolute;
+  top: 537px;
+  right:200px;
+  bottom:200px;
+  left:633px;
+}

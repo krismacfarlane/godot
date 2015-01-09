@@ -4,7 +4,7 @@ module Wdinstagram
     ########################
     # Configuration
     ########################
-    
+
     helpers Wdinstagram::DatabaseHelper
 
     # allow simple "logging" of server output
@@ -41,8 +41,8 @@ module Wdinstagram
 
     post('/entries') do
       id = create_entry(
-        params["author"], 
-        params["date_taken"], 
+        params["author"],
+        params["date_taken"],
         params["photo_url"]
       )
       redirect to("/entries/#{id}")

@@ -12,5 +12,6 @@ body {
 /* ensures that any divs set to display: inline-block will align along the top of their respective containers */
 div {
   vertical-align: top;
+  margin: 95%;
 }
 

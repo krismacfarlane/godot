@@ -1,0 +1,53 @@
+body {
+  font: Helvetica, Arial, sans-serif;
+  background: #fff url("../images/bgtile.png") repeat-x;
+}
+
+div.page {
+  width: 900px;
+  margin: 100px auto 0;
+}
+
+div.content {
+  width: 550px;
+  display: inline-block;
+  float: right;
+}
+
+ul.footer li {
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/*.page {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+
+.main {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 500px;
+}
+
+h1 {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 500px;
+}
+
+h2 {
+  color: blue;
+}
+
+.product-photo {
+  position: relative;
+  margin-top: 25px;
+  margin-left: 100px;
+}
+*/

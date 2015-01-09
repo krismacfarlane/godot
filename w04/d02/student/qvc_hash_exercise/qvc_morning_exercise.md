@@ -142,6 +142,8 @@ $jewelry = {
 
 Note: see [Hash#merge][hashmerge] for a simple option.
 
+$items.merge!($jewelry)
+
 **1) Write a method `item_names` that returns an array of the names of all of
      the items. Example:**
 
@@ -154,6 +156,9 @@ item_names
 #=>   "Shumway Complete Sword Set"
 #=> ]
 ```
+def item_names
+  $items.map {|id, item_hash| item_hash["name"]}
+end
 
 **2) Write a method `item_margins` that returns an array of the margins of all of
      the items. Example:**

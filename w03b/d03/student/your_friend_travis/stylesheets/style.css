@@ -10,5 +10,26 @@ html, body {
   color: #323232;
 }
 
+li {
+  display: inline-block;
+}
+
+.main {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+
+.text1 {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+.text2 {
+  position: absolute;
+  top: 225px;
+  left: 500px;
+}
 /* background color in header & footer: #323232 */
 /* text color code for the header/footer: #DBDBDB       */

@@ -15,5 +15,29 @@ module TheDMV
       render(:erb, :index)
     end
 
+    get('/first_form') do
+      render(:erb, :first_form)
+    end
+
+    post('/first_form') do
+      $redis.hmset("user", "name", params["name"], "license_id", params["license_id"])
+      redirect to('/second_form')
+    end
+
+    get('/second_form') do
+      render(:erb, :second_form)
+    end
+
+    post('/second_form') do
+      $redis.hmset("user", "dob", params["dob"], "sex", params["sex"])
+      redirect to('/third_form')
+    end
+
+    get('/third_form') do
+      render(:erb, :third_form)
+    end
+
   end
 end
+
+
