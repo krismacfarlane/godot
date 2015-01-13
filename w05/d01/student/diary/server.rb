@@ -1,30 +1,35 @@
 require 'redis'
 
-module Diary
-  class Server < Sinatra::Base
+class Server < Sinatra::Base
+  enable :sessions
 
-    configure :development do
-      register Sinatra::Reloader
-      @persons_secrets = Redis.new
-    end
-
-    get('/') do
-      render(:erb, :index, { :layout => :default_layout })
-    end
-
-    get('/signup') do
-      render(:erb, :signup, { :layout => :default_layout })
-    end
-
-    get('/login') do
-      redirect to(params[:name])
-    end
-
-    get '/:username' do
-      @name = params[:username]
-      @secrets = @persons_secrets.lrange @name, 0, -1
-      render(:erb, :user, { :layout => :default_layout })
-    end
-
+  configure :development do
+    register Sinatra::Reloader
+    $redis = Redis.new
   end
+
+  get '/' do
+    render :erb, :index, layout: :default_layout
+  end
+
+  get '/login' do
+    session[:name] = params[:name]
+    session[:timestamp] = Time.now
+    redirect to(params[:name])
+  end
+
+  get '/:username' do
+    authorize!
+    @name = params[:username]
+    @secrets = $redis.lrange "diary:#{@name}", 0, -1
+
+    render :erb, :user, layout: :default_layout
+  end
+
+  def authorize!
+    if session[:name] != params[:username]
+      redirect to('/')
+    end
+  end
+
 end
