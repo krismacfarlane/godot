@@ -31,7 +31,7 @@ For more on code reviews, you can check out:
 - [Code Review Best Practices](http://smartbear.com/smartbear/media/pdfs/wp-cc-11-best-practices-of-peer-code-review.pdf)
 - [Tips for an Effective Code Review](http://blog.fogcreek.com/effective-code-reviews-9-tips-from-a-converted-skeptic)
 - [A Code Review Primer](https://github.com/thoughtbot/guides/tree/master/code-review)
-- [GitHub's Ruby Styleguide](https://github.com/thoughtbot/guides/tree/master/code-review)
+- [GitHub's Ruby Styleguide](https://github.com/styleguide/ruby)
 
 #### Groups
 
@@ -40,7 +40,7 @@ For code reviews we will break in to small groups:
 | Instructor |   Room   | Small Group |
 |:----------:|:--------:|:-----------:|
 |  Phil  |  Classroom   | Andres Valencia, Brian Rucker, Chadd Clairmont,<br>Kamari Aykes, Melodie Malfa, Aliya Scribner |
-| Travis |  Reed (4 Fl) | Dennis Liaw, Kristen MacFarlane, Patricio Calderon,<br>Sade Stevens, Simons Chase  |
+| Travis |  Marcus (4 Fl) | Dennis Liaw, Kristen MacFarlane, Patricio Calderon,<br>Sade Stevens, Simons Chase  |
 |   PJ   | Sagan (4 Fl) | Angelina Bethoney, Dain Carver, Dana DeFilippo,<br>Michael Campbell, Sarah McAlear |
 
 #### Prepare Your Code
