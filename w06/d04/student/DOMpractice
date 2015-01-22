@@ -1,0 +1,12 @@
+var pTag = document.querySelector("p");
+
+pTag.textContent
+pTag.textContent = "Aloha"
+
+var button = document.createElement("h1")
+var button = document.createElement("button");
+var body = document.querySelector("body");
+
+body
+body.appendChild(button)
+button.textContent = "MAKE SMORES";
