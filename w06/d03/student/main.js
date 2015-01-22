@@ -26,14 +26,23 @@ anArray = [aString, anInteger, aFloat, aBoolean];
 anObject = {instructor: "Travis", dog: "Kait"}; // kind of like a hash
 
 // function, they take arguments, but never take blocks
+// a function expression
 var aFunction;
 
 aFunction = function(){
   console.log("Hello world!");
 };
 
+// a function declaration
+// avoid doing it this way
+function anotherFunction(){
+  console.log("Hello world!");
+};
+
+
 var sayItsYourBirthday = function(age){
   console.log("It's your birthday!")
   console.log("I hope " + age + " is better than " + (age-1) + "!");
+  return true // have to write this or it was return 'undefined'n i
 };
 

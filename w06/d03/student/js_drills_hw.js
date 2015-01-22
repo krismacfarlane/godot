@@ -21,8 +21,11 @@ var album1 = {
 };
 
 // 1. Retrieve the string "Sire" from album1, and save it in a sensibly named variable.
+var album1Label;
+album1Label = album1.albumDetails.label;
 
 // 2. Change the title of album1 from "Talking Heads" to "Talking Heads: 77"
+album1.title = "Talking Heads: 77";
 
 var album2 = {
   title: "More Songs About Buildings and Food",
@@ -43,9 +46,14 @@ var album3 = {
 };
 
 // 3. Access album2's formats array and use an array method to add "LP" to album3's formats
+var formatPush;
+formatPush = album2.albumDetails.formats[0];
+
+album3.albumDetails.formats.push(formatPush);
+
 
 // 4. Change the release date of album3 from a string into a Date object
-
+album3.albumDetails.released = new Date("August 3, 1979");
 
 var album4 = {
   title: "Remain in Light",
@@ -56,7 +64,7 @@ var album4 = {
 };
 
 // 5. Add the label "Sire" to album4's details
-
+album4.albumDetails.label = "Sire"
 
 var album5 = {
   title: "Speaking in Tongues",
@@ -67,6 +75,7 @@ var album5 = {
 };
 
 // 6. Add a 'formats' array to album 5 and add "CD", "Cassette", and "LP"
+album5.albumDetails.formats = ["CD", "Cassette", "LP"]
 
 var album6 = {
   title: "Little Creatures",
@@ -78,7 +87,9 @@ var album6 = {
 };
 
 // 7. Make the label "emi" in album6 all uppercase
-
+emiUp = album6.albumDetails.label[1].toUpperCase();
+album6.albumDetails.label.pop();
+album6.albumDetails.label.push(emiUp);
 
 var album7 = {
   title: "True Stories",
@@ -90,6 +101,7 @@ var album7 = {
 };
 
 // Convert album7's 'label' property from the string value "Sire, EMI" into the array: ["Sire", "EMI"]
+album7.albumDetails.label = ["Sire", "EMI"];
 
 var album8 = {
   title: "Naked",
@@ -117,27 +129,62 @@ var talkingHeadsAlbums = [
 
 // 1. print "Talking Heads were a prolific band" to the console IF AND ONLY IF Talking Heads have 6 albums or more. Otherwise, print "Talking heads didn't have much output." Use the array of albums above.
 
+if (talkingHeadsAlbums.length >= 6) {
+console.log("Talking Heads were a prolific band");
+} else {
+console.log("Talking Heads didn't have much output.");
+};
+
 /////////////////////////////////////////////////////
 // Part 4: More Tasks About Datatypes and Structures
 /////////////////////////////////////////////////////
 
 // 1. Create an object literal called `band`.
+var band = {};
 
 // 2. Give it the property `name` and set it to "Talking Heads"
+band.name = "Talking Heads";
 
 // 3. Give it the property `members` and set it to an array with a single string, "David Byrne", in it.
+band.members = ["David Byrne"];
 
 // 4. Give it the property `albums` and set it to the array stored in the variable talkingHeadsAlbums
+band.albums = talkingHeadsAlbums;
 
 // 5. Add "Tiny Weymouth", "Chris Franz" and "Jerry Harrison" to the members array.
+band.members.push("Tiny Weymouth");
+band.members.push("Chris Franz");
+band.members.push("Jerry Harrison");
 
 /////////////////////////////////////////////////////
 // Part 5: For Loops
 /////////////////////////////////////////////////////
 
 // 1. Use a for loop to print out the name of each Talking Heads album
+for (var i=0, len = band.albums.length; i < len; i++) {
+  console.log( band.albums[i].title );
+};
 
 // 2. Create a variable called 'sireTally', and set it to the integer value 0. Then use a for-loop to go through all the Talking Heads albums, incrementing sireTally if the album was released under the "Sire" label
+var sireTally;
+sireTally = 0;
+
+for (var i = 0, len = band.albums.length; i < len; i ++) {
+ for (var i=0, len = band.albums.length; i < len; i++) {
+  if (band.albums[i].albumDetails.label instanceof Array) {
+    for (var i=0, len = band.albums[i].albumDetails.label; i < len; i++) {
+      if ("Sire") {
+       sireTally ++;
+      }
+    }
+  } else if (band.albums[i].albumDetails.label === "Sire") {
+    sireTally ++;
+  }
+}
+}
+
+/* The one above is wrong. I only get 5 back, but it should be 8. This one is tricky! I'm probably just doing this in a really roundabout way.
+*/
 
 /////////////////////////////////////////////////////
 // Part 6: More Tasks With Arrays and For Loops
@@ -152,6 +199,14 @@ var kings = [
 ];
 
 // 1. Create a variable called truePretenders and assign it to an empty array. Then use a for loop to iterate through the 'kings' array, pushing any established pretenders into the waiting truePretenders array.
+var truePretenders;
+truePretenders = [];
+
+for (var i = 0, len = kings.length; i < len; i ++) {
+  if (kings[i].pretender === true) {
+  truePretenders.push(kings[i]);
+  }
+}
 
 /////////////////////////////////////////////////////
 // Part 7: Basic Functions
@@ -159,12 +214,27 @@ var kings = [
 
   // 1. Define a function 'calculateArea' that takes two arguments, 'height' and 'width' and returns the area as an integer.
     // Example usage: calculateArea(3, 4) // =>  12
+var calculateArea;
+calculateArea = function(height, width){
+  return height * width;
+};
 
   // 2. Define a function 'calculateTip' that takes two arguments, 'mealCost' and 'tip_percentage' and returns the appropriate tip amount as a float
     // Example usage: calculateTip(20.00, 15) // =>  3.0
+var calculateTip;
+calculateTip = function(mealCost, tip_percentage){
+  percent = tip_percentage / 100;
+  tip = mealCost * percent;
+  return tip.toFixed(1);
+};
 
   // 3. Define a function 'buildFullName' that takes two arguments, 'firstName' and 'lastName', and returns the full name properly formatted
     // Example usage: buildFullName("Travis", "Vander Hoop") // => "Travis Vander Hoop"
+var buildFullName;
+buildFullName = function(firstName, lastName){
+ return firstName + " " + lastName;
+};
+
 
 /////////////////////////////////////////////////////
 // Part 8: User Validation Functions
@@ -177,21 +247,52 @@ var dave   = { name: "Dave", bornOn: "01/21/2014", password: "buffDog", password
 
 // 1. Create a variable called validatePasswordsMatch, and assign it to a function that takes two arguments, `pw` and `pwConf`.
 //    Make this function return true if the password and password confirmation match, and false if they don't.
+var validatePasswordsMatch;
+validatePasswordsMatch = function(pw, pwConf){
+ return pw === pwConf;
+};
 
 // 2. Use your function on marvin and dave's password and passwordConfirmation attributes to make sure it works.
+validatePasswordsMatch(dave.password, dave.passwordConfirmation);
+// returns false
+validatePasswordsMatch(marvin.password, marvin.passwordConfirmation);
+// returns true
 
 // 3. Create a variable called validatePasswordLength, and assign it to a function that takes a single argument, `pw`.
 //    Make this function return true if the password length is between 8 and 16 characters, and false otherwise.
+var validatePasswordLength;
+validatePasswordLength = function(pw) {
+ return (pw.length >= 8 && pw.length <= 16)
+};
 
 // 4. Use your function on marvin and dave's respective passwords to make sure it works.
+validatePasswordLength(marvin.password);
+// returns true
+validatePasswordLength(dave.password);
+// returns false
 
 // 5. Create a variable called validateEmail, and assign it to a function that takes a single argument, `email`.
 //    Make this function return true if the email contains an @ symbol and no spaces, and false otherwise
+var validateEmail;
+validateEmail = function(email) {
+ atSign = (email.indexOf("@") > 0)
+ spaces = (email.indexOf(" ") > 0)
+ if (atSign === spaces) {
+  return false;
+ } else {
+  return true;
+ }
+};
 
 // 6. Use your function on marvin's and dave's email addresses to make sure it works.
+validateEmail(marvin.email)
+// returns true
+validateEmail(dave.email)
+// returns false
 
 // 7. Create a variable called validateAge, and assign it to a function that takes a single argument, `date`.
 //    Make this function return true if the user is over 13, and false otherwise
+// HELP! couldn't figure this one out!
 
 // 8. Use your function on marvin and dave to make sure it works.
 
@@ -203,3 +304,9 @@ var dave   = { name: "Dave", bornOn: "01/21/2014", password: "buffDog", password
 //    Use the methods you defined above to validate the user's password length and equality, as well as their email and age.
 //    If everything checks out, the validateUser function should return true. If anything *doesn't* check out, make the function return false.
 
+var validateUser;
+validateUser = function(user) {
+  return (validatePasswordsMatch(user.password, user.passwordConfirmation)
+  && validatePasswordLength(user.password) && validateEmail(user.email));
+};
+// this work. marvin returned true and dave returned false. I did not include the validateAge because I couldn't figure it out...
