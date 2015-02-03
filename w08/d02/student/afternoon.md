@@ -9,11 +9,11 @@ INNER JOIN houses
 ON students.house_id = houses.id;
 ```
 
-# 
+#
 
 Update `schema.sql` and create a table called `death_eater_memberships`
 
-`death_eater_memberships` should have a 
+`death_eater_memberships` should have a
 
 - unique id
 - joined_on (a timestamp)
@@ -23,7 +23,7 @@ the `student_id` should have a Foreign Key constraint that references the studen
 
 When you're done you should be able to execute the `death_eaters.sql` file.
 
-# 
+#
 
 How would you write the query to create a join table that shows you the names of all the death eaters?
 
