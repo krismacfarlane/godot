@@ -1,4 +1,4 @@
-console.log('main.js loaded');
+cconsole.log('main.js loaded');
 
 // PART 1
 // (model layer)
