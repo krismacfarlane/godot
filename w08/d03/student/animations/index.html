@@ -8,6 +8,7 @@
 
   <link rel='stylesheet' type='text/css' href='stylesheets/normalize.css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/cards.css">
   <style>
     /* Your style here. */
     #title {
@@ -22,6 +23,25 @@
       -o-animation-duration:      0.5s;
       animation-duration:         0.5s;
     } /* use multiple selectors to increase the specificity! */
+    .table {
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration:    0.5s;
+      -o-animation-duration:      0.5s;
+      animation-duration:         2.0s;
+    }
+    .card {
+      position: absolute;
+      margin-left: -32px;
+    }
+    #deck {
+      top: 216px;
+      left: 50%;
+    }
+    .west { left: 20%; }
+    .north { left: 40%; }
+    .east { left: 60%; }
+    .south { left: 80%; }
+
   </style>
 
   <script type="text/javascript" src="scripts/jquery.js"></script>
@@ -39,6 +59,11 @@
         </ul>
       </nav>
       <section class="table">
+        <div class="animated fadeIn card outline west hide" >West</div>
+        <div class="animated fadeIn card outline north hide">North</div>
+        <div class="animated fadeIn card outline east hide" >East</div>
+        <div class="animated fadeIn card outline south hide">South</div>
+        <div id="deck" class="animated fadeIn card deck hide">Deck</div>
       </section>
     </div>
   </div>
@@ -72,8 +97,14 @@
       var $title = $("#title"),
           $lis   = $("nav li");
 
+      $section.addClass("animated fadeInRight");
+
+      $lis.eq(3).on(animationEnd, fuction(e) {
+        $(".card").removeClass("hide");
+      });
       // now we're talking!
       $title.on(animationEnd, function(e) {
+
         cascadeEffect($lis);
       });
     });
