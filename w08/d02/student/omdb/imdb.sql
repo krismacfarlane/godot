@@ -45,3 +45,30 @@ INSERT INTO actors_movies (actor_id, movie_id) VALUES (5, 3);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (3, 4);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (4, 4);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (6, 4);
+
+
+-- \dt
+-- shows only the tables, no sequence types
+
+-- SELECT * FROM actors;
+-- shows all the info from the actors table
+
+-- SELECT * FROM movies;
+-- shows all the info from the movies table
+
+-- SELECT * FROM movies_actors;
+-- is wrong
+
+-- SELECT * FROM actors_movies;
+-- shows the movie_id matched to the actor_id ONLY
+
+-- What kind of relationship would describe how actors and movies are related?
+-- it's a many-to-many
+
+-- How would we get all the actors who are in all the movies?
+SELECT actors.*, movies.*, actors_movies.*
+FROM actors_movies
+INNER JOIN movies
+ON actors_movies.movie_id = movies.id
+INNER JOIN actors
+ON actors_movies.actor_id = actors.id;
