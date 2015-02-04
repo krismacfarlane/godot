@@ -28,20 +28,25 @@
 -- INNER JOIN houses
 -- ON students.house_id = houses.id;
 
-DROP TABLE IF EXISTS death_eater_memberships;
+-- DROP TABLE IF EXISTS death_eater_memberships;
 
-CREATE TABLE death_eater_memberships (
-  id SERIAL PRIMARY KEY,
-  joined_on TIMESTAMP NOT NULL,
-  student_id INTEGER REFERENCES students(id)
-);
+-- CREATE TABLE death_eater_memberships (
+--   id SERIAL PRIMARY KEY,
+--   joined_on TIMESTAMP NOT NULL,
+--   student_id INTEGER REFERENCES students(id)
+-- );
 
-SELECT death_eater_memberships.*, students.*
-FROM death_eater_memberships
-INNER JOIN students
-ON death_eater_memberships.student_id = students.id;
+-- SELECT death_eater_memberships.*, students.*
+-- FROM death_eater_memberships
+-- INNER JOIN students
+-- ON death_eater_memberships.student_id = students.id;
 
-SELECT death_eater_memberships.*, students.*
-FROM death_eater_memberships
-INNER JOIN students
-ON death_eater_memberships.student_id = students.id AND students.house_id != 4;
+-- SELECT death_eater_memberships.*, students.*, houses.*
+-- FROM death_eater_memberships
+-- INNER JOIN students
+-- ON death_eater_memberships.student_id = students.id
+-- INNER JOIN houses
+-- ON students.house_id = houses.id
+-- WHERE houses.name != 'Slytherin';
+
+
