@@ -1,6 +1,6 @@
 # MOMA App
 
-This app will have 2 models: `Artists` and `Paintings`. 
+This app will have 2 models: `Artists` and `Paintings`.
 
 An Artist __has many__ paintings.
 A Painting __belongs to an__ Artist.
@@ -15,7 +15,7 @@ A Painting has
 ###Part 1 - Database Schemas
 
 1. Create a new database called `moma_db`.
-2. Create the database tables to model Artists, Paintings, and their relationships. 
+2. Create the database tables to model Artists, Paintings, and their relationships.
 3. Save this to a file called `moma.sql`
 
 ###Part 2 - Setting up ActiveRecord
@@ -36,7 +36,7 @@ Artists
 Paintings
 - Starry Night, by Van Gogh
 - Cafe Terrace at Night
-- Guernica, by Picaso 
+- Guernica, by Picaso
 - The Old Guitarist, by Picasso
 - The Great Wave off Kanagawa, by Hokusai
 - Red Fuji, by Hokusai
@@ -46,11 +46,19 @@ Paintings
 Test out with a binding.pry and then write out the commands in a file called `moma.rb` that uses ActiveRecord to do the following:
 
 1. Return all Artists
+Artist.all
+
 1. Return all Paintings
+Painting.all
 
 1. Return the artist with an id of 2
+Artist.find_by(id: 2)
+
 1. Return the artist with a name of "Vincent Van Gogh"
+Artist.find_by(name: 'Pablo Picasso')
+
 1. Return all the artists who are "Spanish"
+Artist.where(nationality: 'Spanish')
 
 1. Return the painting with an id of 1
 1. Return the painting with a name of "Guernica"
