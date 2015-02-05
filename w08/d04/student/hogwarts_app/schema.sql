@@ -13,7 +13,7 @@ create table students (
   id serial PRIMARY KEY,
   fname varchar NOT NULL,
   lname varchar NOT NULL,
-  house_id integer REFERENCES houses(id)
+  house_id integer REFERENCES houses(id) on delete cascade on update cascade
 );
 
 CREATE TABLE spells (
@@ -22,12 +22,12 @@ CREATE TABLE spells (
 );
 
 CREATE TABLE spells_students (
-  spell_id integer REFERENCES spells(id),
-  student_id integer REFERENCES students(id)
+  spell_id integer REFERENCES spells(id) on delete cascade on update cascade,
+  student_id integer REFERENCES students(id) on delete cascade on update cascade
 );
 
 create table death_eater_memberships (
   id serial PRIMARY KEY,
   joined_on timestamp,
-  student_id integer REFERENCES students(id)
+  student_id integer REFERENCES students(id) on delete cascade on update cascade
 );
