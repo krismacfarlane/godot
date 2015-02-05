@@ -36,3 +36,37 @@ INSERT INTO receipts (store, item, number_of_items, price, buy_date) VALUES
   UPDATE receipts SET store = 'Toys "R" Us' WHERE store = 'Toys R Us';
 
   DELETE FROM receipts WHERE id = 14;
+
+DROP TABLE IF EXISTS stores;
+
+CREATE TABLE stores (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50),
+  slogan VARCHAR(100) NOT NULL
+);
+
+INSERT INTO stores
+  (name, slogan)
+VALUES
+  ('Sears', 'slogan'),
+  ('Target', 'slogan'),
+  ('JC Penney', 'slogan'),
+  ('The Cake Ambience', 'slogan'),
+  ('Strand', 'slogan'),
+  ('The White House House Gift Shop', 'slogan'),
+  ('Toys "R" Us', 'slogan'),
+  ('Nordstrom Rack', 'slogan'),
+  ('Macy''s', 'slogan'),
+  ('Schnapps Haus', 'slogan'),
+  ('Community Books', 'slogan');
+
+ALTER TABLE receipts ADD COLUMN store_id INTEGER REFERENCES stores(id);
+
+UPDATE
+    receipts
+SET
+    receipts.store_id = stores.id
+FROM
+  stores
+WHERE
+    receipts.store = stores.name;

@@ -28,3 +28,5 @@ INSERT INTO receipts (store, item, number_of_items, price, buy_date) VALUES
   ('Toys R Us', 'Life', 1, 25, 'March 24 2014'),
   ('Sears', 'laptop bag', 24, 40.50, 'March 24 2014'),
   ('Schnapps Haus', 'Heatstreet Maple Bourbon', 1, 40.99, 'July 4 2014');
+
+
