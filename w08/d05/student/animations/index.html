@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/cards.css">
   <link rel='stylesheet' type='text/css' href='stylesheets/normalize.css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/jquery_ui.js">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
   <style>
     /* Your style here. */
@@ -46,6 +47,7 @@
   </style>
 
   <script type="text/javascript" src="scripts/jquery.js"></script>
+  <script type="text/javascript" src=""></script>
   <script type="text/javascript" src="scripts/lodash.js"></script>
 </head>
 <body>
@@ -79,7 +81,8 @@
         $currentCardEl,
         deckOfCards,
         currentDeck,
-        deckIsShuffled = false;
+        deckIsShuffled = false,
+        lastCard;
 
     deckOfCards = [
       "dA","dK","dQ","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02",
@@ -115,8 +118,13 @@
       return $('<div class="card '+card+'">'+card+'</div>')
         .css({top: "216px", left: "50%"})
         .addClass("animated flipInY")
+        .one("click", function(event) {
+          $(event.target).animate({
+            top: "40px",
+            left: "20%"}, 1500 );
+          })
         .appendTo($table);
-    }
+    };
 
     window.addEventListener("load", function(e) {
       $title = $("#title");

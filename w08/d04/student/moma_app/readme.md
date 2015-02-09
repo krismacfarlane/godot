@@ -61,7 +61,10 @@ Artist.find_by(name: 'Pablo Picasso')
 Artist.where(nationality: 'Spanish')
 
 1. Return the painting with an id of 1
+Painting.find_by(id: 1)
+
 1. Return the painting with a name of "Guernica"
+Painting.find_by(title: 'Guernica')
 
 1. Return all the paintings that "Pablo Picasso" painted
 1. Return the artist of "Guernica"
