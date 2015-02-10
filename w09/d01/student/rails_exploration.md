@@ -40,45 +40,66 @@ Run the command `rails` from outside of a Rails app and from within one.
 Does the output change?
 
 - What version of Rails are you running?
+$ rails -v
+Rails 4.2.0
+
 - What's the command to create a new Rails application?
+rails new APPNAME
+
 - What is Rails default Database?
+  -d, [--database=DATABASE]                              # Preconfigure for selected database (options: mysql/oracle/postgresql/sqlite3/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                         # Default: sqlite3
+
 - How does one configure Rails presets?
+-f
+
 - How does one create a new Rails Application with a postgresql database?
+rails new appy_name -d postgres
 
 ## Do the following
 
 Inside of `dev/wdi`
 
 Create a new Rails application called `sample_app` without Active Record
+-O, [--skip-active-record], [--no-skip-active-record]  # Skip Active Record files
+rails new sample_app -O
 
-Create another new Rails application called `welcome_app` with 
+Create another new Rails application called `welcome_app` with
 
-- a postgres database inside of `dev/wdi` 
+- a postgres database inside of `dev/wdi`
 - no Javascript
+rails new welcome_app -d postgresql --skip-javascript
 
 Create another new Rails application called `popcorn_app` with
 
 - a postgres database
 - no turbolinks
-- no test unit 
+- no test unit
+rails new popcorn_app -d postgresql --skip-turbolinks --skip-test-unit
 
 `cd` into `sample_app` and run `rails -h`
 
 What is the command to start the server?
+server      Start the Rails server
 
 What port does the server listen on?
+3000
 
 What's the command to run the server in a different environment?
+rails server -e production
 
 What command starts a Rails console?
+ console     Start the Rails console
 
 `rake` is a Ruby program built to run tasks.
 
 Run `rake -h`
 
 What is the command to view all tasks that can be performed?
+-A, --all                        Show all tasks, even uncommented ones (in combination with -T or -D)
 
 What tasks can be performed in a Rails app?
+
 
 What's the command to start the server?
 
