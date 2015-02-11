@@ -1,0 +1,11 @@
+<div class="cheese">
+
+  <p>Name: <%= @cheese.name %> </p>
+  <p>Type of milk: <%= @cheese.milk_type %> </p>
+  <p>Description: <%= @cheese.description %> </p>
+  <p><%= @cheese.image_url %> </p>
+
+
+</div>
+
+<%= link_to("Return to cheese list.", cheeses_path) %>

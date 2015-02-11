@@ -1,0 +1,10 @@
+<div class="cheeses collection">
+  <ul>
+  <% @cheeses.each do |cheese| %>
+    <li>
+    <%= link_to(cheese.name, cheese_path(cheese)) %>
+    <%= button_to "Eat this cheese.", cheese_path(cheese), method: "delete" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
