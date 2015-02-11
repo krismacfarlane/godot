@@ -31,6 +31,10 @@ class UsersController < ApplicationController
     redirect_to user_path(user)
   end
 
+  def test
+
+  end
+
   def user_params
     params.require(:user).permit(:login, :born_on)
   end

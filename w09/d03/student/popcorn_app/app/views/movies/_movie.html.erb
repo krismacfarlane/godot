@@ -1,0 +1,7 @@
+<div class="user">
+  <p>Title: <%= movie.title %></p>
+  <p>Description: <%= movie.description %></p>
+  <p>Rating: <%= movie.rating %></p>
+  <%= link_to("Go to this movie.", movie_path(movie)) %>
+  <%= button_to "Delete this movie.", movie_path(movie), method: "delete", class: "delete_btn" %>
+</div>

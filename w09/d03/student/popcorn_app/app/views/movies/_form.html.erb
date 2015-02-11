@@ -1,0 +1,19 @@
+<%= form_for(@movie) do |f| %>
+  <%= f.label :purchase_price %>:
+  <%= f.text_field :purchase_price %><br />
+  <%= f.label :rental_price %>:
+  <%= f.text_field :rental_price %><br />
+  <%= f.label :available_on %>:
+  <%= f.date_field :available_on %><br />
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+  <%= f.label :rating %>:
+  <%= f.text_field :rating %><br />
+  <%= f.label :poster_image %>:
+  <%= f.text_field :poster_image %><br />
+  <%= f.label :length %>:
+  <%= f.text_field :length %><br />
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+  <%= f.submit %>
+<% end %>
