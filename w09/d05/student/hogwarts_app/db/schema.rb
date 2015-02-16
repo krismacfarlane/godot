@@ -26,12 +26,9 @@ ActiveRecord::Schema.define(version: 20131030184440) do
   create_table "students", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "img_url",    null: false
-    t.integer  "house_id",   null: false
+    t.integer  "house_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "students", ["house_id"], name: "index_students_on_house_id", using: :btree
-
-  add_foreign_key "students", "houses", name: "fk_students_houses"
 end
