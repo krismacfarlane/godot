@@ -1,0 +1,14 @@
+<div class="author">
+  <h2><strong><%= @author.name %></strong></h2>
+  <p>Born on: <%= @author.born_on.strftime("%m/%d/%Y") %></p>
+  <p><%= @author.gender.capitalize %></p>
+
+  <p><strong>Books</strong></p>
+  <ul>
+    <% @author.books.each do |book| %>
+    <li><a href="/books/<%= book.id %>"</a><%= book.title %></li>
+    <% end %>
+  </ul>
+
+</div>
+<%= link_to("Return to author list.", authors_path) %>

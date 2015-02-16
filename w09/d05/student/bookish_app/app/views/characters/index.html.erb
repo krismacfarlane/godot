@@ -1,0 +1,7 @@
+<h1>Characters</h1>
+<%= button_to "Add a new character", new_character_path, method: "get" %>
+<% @characters.each do |character| %>
+  <div class="character">
+    <h2><a href="characters/<%= character.id %>"</a><%= character.name %></h2>
+  <div>
+<% end %>

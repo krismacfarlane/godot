@@ -1,0 +1,6 @@
+<div class="character">
+  <h2><strong><%= @character.name %></strong></h2>
+  <p>Gender: <%= @character.gender.capitalize %></p>
+  <p>Quirk: <%= @character.quirk %></p>
+</div>
+<%= link_to("Return to character list.", characters_path) %>

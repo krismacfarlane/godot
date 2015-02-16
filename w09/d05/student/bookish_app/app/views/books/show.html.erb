@@ -1,0 +1,14 @@
+<div class="book">
+  <h2><strong><%= @book.title %></strong></h2>
+  <p>Released on: <%= @book.released_on.strftime("%m/%d/%Y") %></p>
+  <p>Genre: <%= @book.genre %></p>
+
+  <p><strong>Characters</strong></p>
+  <ul>
+    <% @book.characters.each do |character| %>
+    <li><a href="/characters/<%= character.id %>"</a><%= character.name %></li>
+    <% end %>
+  </ul>
+
+</div>
+<%= link_to("Return to book list.", books_path) %>

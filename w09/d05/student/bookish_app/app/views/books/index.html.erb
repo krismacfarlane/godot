@@ -1,0 +1,7 @@
+<h1>Books</h1>
+<%= button_to "Add a new book", new_book_path, method: "get" %>
+<% @books.each do |book| %>
+  <div class="book">
+    <h2><a href="books/<%= book.id %>"</a><%= book.title %></h2>
+  <div>
+<% end %>
