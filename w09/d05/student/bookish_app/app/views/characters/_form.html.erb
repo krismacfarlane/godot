@@ -1,0 +1,10 @@
+<%= form_for(@character) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br/>
+  <%= f.label :gender %>
+  <%= f.text_field :gender %> <br/>
+    <%= f.label :quirk %>
+  <%= f.text_field :quirk %> <br/>
+  <%= f.submit %>
+<% end %>
+

@@ -2,5 +2,6 @@
   <h2><strong><%= @character.name %></strong></h2>
   <p>Gender: <%= @character.gender.capitalize %></p>
   <p>Quirk: <%= @character.quirk %></p>
+  <%= button_to "Delete this character.", character_path(@character), method: "delete", class: "delete_btn" %>
 </div>
 <%= link_to("Return to character list.", characters_path) %>

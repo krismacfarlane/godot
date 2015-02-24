@@ -1,0 +1,14 @@
+<%= form_for(@author) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br/>
+  <%= f.label :born_on, "Date of birth" %>
+  <%= f.date_field :born_on %><br/>
+  <%= f.label :died_on, "Date of death" %>
+  <%= f.date_field :died_on %><br/>
+  <%= f.label :gender %>
+  <%= f.text_field :gender %> <br/>
+  <%= label :has_pseudonyn, "Has pseudonym?" %>
+  <%= f.radio_button :has_pseudonyn, false , :checked => false , :value => false %><br/<
+  <%= f.submit %>
+<% end %>
+

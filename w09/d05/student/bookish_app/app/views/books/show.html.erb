@@ -9,6 +9,7 @@
     <li><a href="/characters/<%= character.id %>"</a><%= character.name %></li>
     <% end %>
   </ul>
+  <%= button_to "Delete this book.", book_path(@book), method: "delete", class: "delete_btn" %>
 
 </div>
 <%= link_to("Return to book list.", books_path) %>

@@ -1,5 +1,5 @@
 <h1>Authors</h1>
-<%#= button_to "Add a new author", new_author_path, method: "get" %>
+<%= button_to "Add a new author", new_author_path, method: "get" %>
 <% @authors.each do |author| %>
   <div class="author">
     <h2><a href="authors/<%= author.id %>"</a><%= author.name %></h2>
