@@ -31,7 +31,11 @@ describe('pluralize', function(){
     // pending("This won't run until we comment it out");
     expect( pluralize(list) ).toEqual( "lions, tigers and bears" );
   });
+  it("works on any array of strings", function(){
+    var snacks = ['doritos', 'apples', 'candy', 'cheetos'];
+    expect( pluralize(snacks) ).toEqual( "doritos, apples, candy and cheetos");
 
+  });
 });
 
 describe('prettyTime', function(){
