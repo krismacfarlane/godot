@@ -3,19 +3,19 @@ require 'rails_helper'
 describe "an intro to capybara" do
 
   # Remove the x to run the test
-  xit "interacts with the browser" do
+  it "interacts with the browser" do
     visit "/"
     expect(page).to have_content("Capy App!")
   end
 
-  xit "can click links" do
+  it "can click links" do
     visit "/"
     click_link("New Quiz")
     expect(page).to have_content("New Quiz Form")
     expect(current_path).to eq('/quiz/new')
   end
 
-  xit "can interact via JavaScript", js: true do
+  it "can interact via JavaScript", js: true do
     visit "/"
     div = find('div#greeter')
     expect( div.text ).to eq("Hello")
