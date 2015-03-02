@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>SCOPE</title>
+  <script type="text/javascript" src='jquery.js'></script>
+  <script type="text/javascript" src='lodash.js'></script>
+    <script type="text/javascript" src='dog.js'></script>
+
+</head>
+<body>
+
+  <div class='content'></div>
+  <div>
+  <div></div>
+  </div>
+
+  <script type="text/javascript">
+
+    var snoopDog = 'doggy dog';
+
+    var iterator = (function() {
+      var i = 0;
+      var newFunction = function() {
+        var snoopLion = 'lame';
+        console.log(i);
+        i++;
+      }
+      return newFunction;
+    })();
+
+    var createIterator = (function() {
+      var i = 0;
+      var newFunction = function() {
+        console.log(i);
+        i++;
+      }
+      return newFunction;
+    });
+
+    var saySomething = function(something) {
+      console.log(this.name + ' ' + something);
+    }
+
+    for(var i = 0, len = 4; i < len; i++) {
+      var b = i;
+      window["func" + 1] = function(b) {
+        console.log(b);
+      }
+    }
+
+  </script>
+
+  <script type="text/template" id="dog-template">
+    <div class='dog'>
+    <h3><%= name %> </h3>
+    <p> Age: <%=age %> </p>
+    <button class="bark">Bark!</button>
+
+  </script>
+
+</body>
+</html>
