@@ -1,4 +1,4 @@
-xdescribe("LambView", function(){
+describe("LambView", function(){
   var lamb, lambView;
 
   beforeEach(function(){

@@ -13,6 +13,20 @@
       <div class="title">Bank of GA</div>
     </div>
 
+    <div id="accounts">
+<!-- content will be appended here -->
+    </div>
+
+<script type="text/template" id="account-template">
+  <div class="account" id="<%= "account" + number %>" >
+  <h2><%= type %></h2>
+  <div class="balance" id="<%= type + "_balance" %>" >$<%= amount %></div>
+  <input id="<%= type  + "_amount" %>" type="text" placeholder="enter an amount" />
+  <input id="<%= type + "_deposit" %>" type="button" value="Deposit" />
+  <input id="<%= type + "_withdraw" %>" type="button" value="Withdraw" />
+  </div>
+</script>
+
     <script src="javascripts/main.js"></script>
   </body>
 </html>
